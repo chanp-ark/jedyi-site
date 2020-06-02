@@ -10,9 +10,11 @@ const Contact = () => {
   return (
     <Layout>
       <Container>
+        
+        {/* netlify-honeypot='bot-field' */}
         <Title>SPEAKING REQUEST</Title>
-        <form name='invite' action='/success' method='post' netlify-honeypot='bot-field' data-netlify='true'>
-          <input type='hidden' name='bot-field' />
+        <form name='invite' action='/success' method='POST'   data-netlify='true'>
+          <input type='hidden' name='bot-field' form-name='invite'/>
           <label>
             Name
             <input type='text' name='name' />
@@ -35,7 +37,7 @@ const Contact = () => {
           </label>
           <label>
             Speaking Date(s) + Time(s)
-            <textarea type='text' name='when' rows='5' cols='33' />
+            <input type='text' name='when' />
           </label>
           <label>Speaking Venue</label>
           <label>
