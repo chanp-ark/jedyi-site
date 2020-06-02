@@ -1,0 +1,35 @@
+form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  text-align: center;
+  
+  @media(max-width: 500px) {
+    width: 80%;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+input {
+  text-align: center;
+  line-height: 24px;
+}
+
+textarea {
+  text-align: center;
+  resize: none;
+}
+
+button {
+  width: 4rem;
+  margin: 2rem auto;
+  height: 2rem;
+}

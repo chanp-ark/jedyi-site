@@ -1,5 +1,8 @@
 import React from 'react'
-import Title from '../components/title'
+
+import Title from '../title'
+
+import './sermon.styles.css'
 
 const SermonVideo = () => {
   return (

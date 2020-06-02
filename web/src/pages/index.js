@@ -12,8 +12,8 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 import Hero from '../components/hero'
-import About from '../components/about'
-import SermonVideo from '../components/sermon'
+import About from '../components/about/about'
+import SermonVideo from '../components/sermon/sermon'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -95,12 +95,7 @@ const IndexPage = props => {
         <Container>
           <About />
           <SermonVideo />
-          {projectNodes && (
-            <ProjectPreviewGrid
-              nodes={projectNodes}
-              browseMoreHref='/blogs/'
-            />
-          )}
+          {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
         </Container>
       </Layout>
     </>

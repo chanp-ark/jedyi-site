@@ -31,10 +31,30 @@
   }
 }
 
+/* .grid {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  
+  @media (max-width: 700px) {
+    width: 80%;
+  }
+}
+
+.grid li {
+  padding-top: 20px;
+} */
+
+
 .browseMoreNav {
   composes: small from './typography.module.css';
   margin-top: 1rem;
-  text-align: right;
+  text-align: center;
 
   @nest & a {
     display: inline-block;
