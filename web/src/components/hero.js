@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
 const ImageBackground = styled('div')`
@@ -8,11 +8,10 @@ const ImageBackground = styled('div')`
   background-position: top 10% center;
   background-size: cover;
   height: 100vh;
-  
+
   + * {
     margin-top: 0;
   }
-  
 `
 
 const TextBox = styled('div')`
@@ -24,7 +23,7 @@ const TextBox = styled('div')`
   justify-content: space-around;
   margin: 0 auto;
   text-align: center;
-  
+
   div {
     padding-bottom: 25px;
   }
@@ -32,14 +31,13 @@ const TextBox = styled('div')`
     text-shadow: 1px 1px 3px #eeddff66;
     font-size: 2.4rem;
   }
-  
+
   a {
     color: #222;
-    margin-top: 0 ;
+    margin-top: 0;
     text-decoration: none;
     font-weight: 700;
     font-size: 30px;
-
   }
 `
 const Hero = () => {
