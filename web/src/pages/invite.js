@@ -11,7 +11,7 @@ const Contact = () => {
     <Layout>
       <Container>
         <Title>SPEAKING REQUEST</Title>
-        <form method='post' netlify-honeypot='bot-field' data-netlify='true'>
+        <form name='invite' action='/success' method='post' netlify-honeypot='bot-field' data-netlify='true'>
           <input type='hidden' name='bot-field' />
           <label>
             Name
