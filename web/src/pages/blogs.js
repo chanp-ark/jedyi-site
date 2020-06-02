@@ -49,7 +49,7 @@ const ArchivePage = props => {
     data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
-      <SEO title='Archive' />
+      <SEO title="Blogs" description="Blog posts by Jed Yi" />
       <Container>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}
       </Container>

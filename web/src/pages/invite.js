@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Container from '../components/container'
 
@@ -9,12 +10,18 @@ import '../styles/invite.styles.css'
 const Contact = () => {
   return (
     <Layout>
+      <SEO title="Speaking Request" />
       <Container>
-        
-        {/* netlify-honeypot='bot-field' */}
         <Title>SPEAKING REQUEST</Title>
-        <form name='invite' action='/success' method='POST'   data-netlify='true'>
-          <input type='hidden' name='bot-field' form-name='invite'/>
+        <form
+          name='invite'
+          action='/success'
+          method='POST'
+          netlify-honeypot='bot-field'
+          data-netlify='true'
+        >
+          <input type='hidden' name='bot-field' />
+          <input type='hidden' name='form-name' value='invite' />
           <label>
             Name
             <input type='text' name='name' />
@@ -60,7 +67,9 @@ const Contact = () => {
             How did you hear about Jed Yi?
             <input type='text' name='message' />
           </label>
-          <button type='submit'>Send</button>
+          <button type='submit' value='Send Message' className='special'>
+            Send
+          </button>
         </form>
       </Container>
     </Layout>
