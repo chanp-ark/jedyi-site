@@ -23,11 +23,6 @@ input {
   line-height: 24px;
 }
 
-textarea {
-  text-align: center;
-  resize: none;
-}
-
 button {
   width: 4rem;
   margin: 2rem auto;

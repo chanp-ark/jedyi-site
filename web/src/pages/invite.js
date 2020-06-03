@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Container from '../components/container'
@@ -7,10 +8,37 @@ import Title from '../components/title'
 
 import '../styles/invite.styles.css'
 
+const NameField = styled('div')`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 50%
+    
+    p {
+      width: 50px;
+    }
+  }
+  
+  label {
+    flex-direction: row;
+  }
+  
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+`
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="Speaking Request" />
+      <SEO title='Speaking Request' description='Invite form to submit a speaking request' />
       <Container>
         <Title>SPEAKING REQUEST</Title>
         <form
@@ -22,10 +50,25 @@ const Contact = () => {
         >
           <input type='hidden' name='bot-field' />
           <input type='hidden' name='form-name' value='invite' />
-          <label>
-            Name
-            <input type='text' name='name' />
-          </label>
+          <label>Name</label>
+          <NameField>
+            <label>
+              <div>
+                <input type='text' name='first-name' />
+                <p>
+                  first
+                </p>
+                
+              </div>
+
+              <div>
+                <input type='text' name='last-name' />
+                <p>
+                  last
+                </p>
+              </div>
+            </label>
+          </NameField>
           <label>
             Email Address
             <input type='email' name='email' />
@@ -65,7 +108,7 @@ const Contact = () => {
           </label>
           <label>
             How did you hear about Jed Yi?
-            <input type='text' name='message' />
+            <input type='text' name='mutual-connection' />
           </label>
           <button type='submit' value='Send Message' className='special'>
             Send

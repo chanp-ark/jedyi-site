@@ -9,6 +9,9 @@ const JedImage = styled('div')`
   background-size: cover;
   height: 50vh;
   width: 40vh;
+  @media (max-width: 900px) {
+    margin: 0 1rem 1rem 1rem;
+  }
 `
 
 const Biography = styled('div')`
