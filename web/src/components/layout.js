@@ -10,6 +10,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
+        <div className='social-links'>
+          {/* social link icons */}
+        </div>
         <div className={styles.siteInfo}>
           © {new Date().getFullYear()} by <a href='https://www.sanity.io'>Chan Park</a>
         </div>
