@@ -8,7 +8,7 @@ import Title from '../components/title'
 
 import '../styles/invite.styles.css'
 
-const NameField = styled('div')`
+const NameField = styled('label')`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,26 +16,21 @@ const NameField = styled('div')`
   div {
     display: flex;
     flex-direction: column;
+    width: 47%;
     margin: 0;
     padding: 0;
-    width: 50%
     
     p {
-      width: 50px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 0.7rem;
     }
+    
   }
   
-  label {
-    flex-direction: row;
-  }
-  
-  p {
-    padding: 0;
-    margin: 0;
-  }
-
 `
-const Contact = () => {
+const Invite = () => {
   return (
     <Layout>
       <SEO title='Speaking Request' description='Invite form to submit a speaking request' />
@@ -52,63 +47,61 @@ const Contact = () => {
           <input type='hidden' name='form-name' value='invite' />
           <label>Name</label>
           <NameField>
-            <label>
-              <div>
-                <input type='text' name='first-name' />
-                <p>
-                  first
-                </p>
-                
-              </div>
+            <div>
+              <input type='text' name='first-name' autoComplete='no' />
+              <p>
+                first
+              </p>
+              
+            </div>
 
-              <div>
-                <input type='text' name='last-name' />
-                <p>
-                  last
-                </p>
-              </div>
-            </label>
+            <div>
+              <input type='text' name='last-name' autoComplete='no' />
+              <p>
+                last
+              </p>
+            </div>
           </NameField>
           <label>
             Email Address
-            <input type='email' name='email' />
+            <input type='email' name='email' autoComplete='no' />
           </label>
           <label>
             Phone
-            <input type='text' name='phone' />
+            <input type='text' name='phone' autoComplete='no' />
           </label>
           <label>
             Name of Organization & Event
-            <input type='text' name='org-name' />
+            <input type='text' name='org-name' autoComplete='no' />
           </label>
           <label>
             Organization Website
-            <input type='text' name='website' />
+            <input type='text' name='website' autoComplete='no' />
           </label>
           <label>
             Speaking Date(s) + Time(s)
-            <input type='text' name='when' />
+            <input type='text' name='when' autoComplete='no' />
           </label>
-          <label>Speaking Venue</label>
+          <label className='speaking-venue'>VENUE</label>
           <label>
             Address
-            <input type='text' name='address' />
+            <input type='text' name='address' autoComplete='no' />
           </label>
           <label>
             City
-            <input type='text' name='city' />
+            <input type='text' name='city' autoComplete='no' />
           </label>
           <label>
             State
-            <input type='text' name='state' />
+            <input type='text' name='state' autoComplete='no' />
           </label>
           <label>
             Postal Code
-            <input type='text' name='zip' />
+            <input type='text' name='zip' autoComplete='no' />
           </label>
-          <label>
+          <label className='how'>
             How did you hear about Jed Yi?
-            <input type='text' name='mutual-connection' />
+            <input type='text' name='mutual-connection' autoComplete='no' />
           </label>
           <button type='submit' value='Send Message' className='special'>
             Send
@@ -119,4 +112,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Invite
