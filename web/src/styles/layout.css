@@ -13,6 +13,32 @@ html {
 
 }
 
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin: 0 1em;
+}
+
+.social-links a {
+  padding: 1em;
+  margin: 0.2em;
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   background: rgb(243, 248, 252);
