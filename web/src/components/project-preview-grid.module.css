@@ -16,17 +16,19 @@
 
 .grid {
   margin: 0;
-  padding: 0;
+  padding: 1em 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2em;
 
   @media (--media-min-small) {
+    padding: 0;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (--media-min-medium) {
+    padding: 1em 0;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

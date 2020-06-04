@@ -12,23 +12,21 @@ const NameField = styled('label')`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+
   div {
     display: flex;
     flex-direction: column;
     width: 47%;
     margin: 0;
     padding: 0;
-    
+
     p {
       width: 100%;
       margin: 0;
       padding: 0;
       font-size: 0.7rem;
     }
-    
   }
-  
 `
 const Invite = () => {
   return (
@@ -49,17 +47,12 @@ const Invite = () => {
           <NameField>
             <div>
               <input type='text' name='first-name' autoComplete='no' />
-              <p>
-                first
-              </p>
-              
+              <p>first</p>
             </div>
 
             <div>
               <input type='text' name='last-name' autoComplete='no' />
-              <p>
-                last
-              </p>
+              <p>last</p>
             </div>
           </NameField>
           <label>
