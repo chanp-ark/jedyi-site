@@ -9,10 +9,12 @@ const JedImage = styled('div')`
   background-position: top 40% center;
   background-size: cover;
   height: 61vh;
+  max-height: 565px;
   width: 55vh;
   min-width: 200px;
   max-width: 400px;
   margin: 1rem;
+  
   @media (max-width: 950px) {
     margin: 0 1rem 1rem 1rem;
     height: 35vh;
@@ -23,6 +25,7 @@ const JedImage = styled('div')`
 const Biography = styled('div')`
   height: 61vh;
   width: 55vh;
+  max-height: 565px;
   overflow-y: scroll;
   overflow-x: hidden;
   min-width: 200px;
@@ -32,8 +35,8 @@ const Biography = styled('div')`
   flex-direction: column;
   justify-content: space around;
 
-  div:not(:first-child) {
-    margin-top: 8px;
+  div {
+    margin-bottom: 8px;
   }
 
   @media (max-width: 950px) {
