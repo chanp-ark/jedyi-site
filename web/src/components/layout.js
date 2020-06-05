@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'gatsby'
 import Header from './header'
 
+import SocialLinks from '../components/social-links/social-link'
+
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
@@ -12,17 +14,13 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className='footer-nav'>
-          <div className='nav'><Link to='/invite'>Invite</Link></div>
-          <div className='social-links'>
-            <Link>F</Link>
-            <Link>I</Link>
-            <Link>E</Link>
-            <Link>S</Link>
-            <Link>Y</Link>
+          <div className='nav'>
+            <Link to='/invite'>Invite</Link>
           </div>
+          <SocialLinks className='social-links-footer' />
         </div>
         <div className={styles.siteInfo}>
-          © {new Date().getFullYear()} by <a href='https://www.sanity.io'>Chan Park</a>
+          © {new Date().getFullYear()} by <a href='https://www.linkedin.com/in/chan-y-park/'>Chan Park</a>
         </div>
       </div>
     </footer>
