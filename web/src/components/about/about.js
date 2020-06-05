@@ -11,6 +11,7 @@ const JedImage = styled('div')`
   height: 61vh;
   width: 55vh;
   min-width: 200px;
+  max-width: 400px;
   margin: 1rem;
   @media (max-width: 950px) {
     margin: 0 1rem 1rem 1rem;
@@ -25,6 +26,7 @@ const Biography = styled('div')`
   overflow-y: scroll;
   overflow-x: hidden;
   min-width: 200px;
+  max-width: 390px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
