@@ -20,7 +20,8 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
           <SocialLinks className='social-links-footer' />
         </div>
         <div className={styles.siteInfo}>
-          © {new Date().getFullYear()} by <a href='https://www.linkedin.com/in/chan-y-park/'>Chan Park</a>
+          © {new Date().getFullYear()} by{' '}
+          <a href='https://www.linkedin.com/in/chan-y-park/'>Chan Park</a>
         </div>
       </div>
     </footer>

@@ -26,7 +26,16 @@ const Biography = styled('div')`
   overflow-x: hidden;
   min-width: 200px;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space around;
+
+  div:not(:first-child) {
+    margin-top: 8px;
+  }
+
   @media (max-width: 950px) {
+    margin: 0 1rem 1rem 1rem;
     height: 35vh;
     width: 32vh;
     font-size: 14px;
@@ -63,9 +72,9 @@ const AboutMe = () => {
             </div>
             <div>
               My heart’s desire is to follow Jesus and to go wherever he leads. The values that the
-              Lord has placed in my heart include: reaching out to the lost, teaching the Word of
-              God, worship and prayer, empowering the wider body of Christ to fulfill the mission of
-              the kingdom, and to minister to the poor.
+              Lord has placed in my heart include: reaching the lost, teaching the Word of God,
+              ministering to the poor, and empowering the wider body of Christ to fulfill the
+              mission of the kingdom.
             </div>
             <div>
               In my free time, I love watching Skip and Shannon on Undisputed, writing music,
