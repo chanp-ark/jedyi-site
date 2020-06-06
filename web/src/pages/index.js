@@ -15,6 +15,7 @@ import Hero from '../components/hero'
 import About from '../components/about/about'
 import SermonVideo from '../components/sermon/sermon'
 import SocialLinks from '../components/social-links/social-link'
+import Endorsement from '../components/endorsement/endorsements'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -100,6 +101,7 @@ const IndexPage = props => {
           <SocialLinks className='social-links-section' />
           <SermonVideo />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
+          {/* <Endorsement /> */}
         </Container>
       </Layout>
     </>
