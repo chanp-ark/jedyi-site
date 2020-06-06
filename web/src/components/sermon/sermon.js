@@ -8,7 +8,7 @@ import './sermon.styles.css'
 const MessageContainer = styled('div')`
   box-sizing: border-box;
   max-width: 820px;
-  padding: 1.5em;
+  padding: 1.5em 0;
   margin: 0 auto;
 
   @media (--media-min-small) {
@@ -19,7 +19,7 @@ const MessageContainer = styled('div')`
 const VideoContainer = styled('div')`
   height: 50vh;
   width: 100%;
-  padding: 1em auto;
+  padding: 1em 0;
 
   @media (max-width: 660px) {
     height: 35vh;

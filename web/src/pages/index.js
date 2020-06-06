@@ -24,7 +24,7 @@ export const query = graphql`
       keywords
     }
     projects: allSanitySampleProject(
-      limit: 6
+      limit: 3
       sort: {fields: [publishedAt], order: DESC}
       filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
     ) {
@@ -66,6 +66,8 @@ export const query = graphql`
 
 const IndexPage = props => {
   const {data, errors} = props
+  
+  console.log("index props", props)
 
   if (errors) {
     return (
@@ -90,9 +92,9 @@ const IndexPage = props => {
 
   return (
     <>
-      <Hero />
       <Layout>
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
+        <Hero />
         <Container>
           <About />
           <SocialLinks className='social-links-section' />
