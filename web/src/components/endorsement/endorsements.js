@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import Title from '../title'
+import Title from '../titles/title'
 
 const EndorseContainer = styled('div')`
   display: flex;
@@ -11,6 +11,7 @@ const EndorseContainer = styled('div')`
 const Endorsement = () => {
   return (
     <>
+      <div id='endorsements' />
       <Title>Endorsements</Title>
       <EndorseContainer>Somebody endorse this brotha</EndorseContainer>
     </>

@@ -16,6 +16,7 @@ import About from '../components/about/about'
 import SermonVideo from '../components/sermon/sermon'
 import SocialLinks from '../components/social-links/social-link'
 import Endorsement from '../components/endorsement/endorsements'
+import Divider from '../components/divider/divider'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -67,8 +68,6 @@ export const query = graphql`
 
 const IndexPage = props => {
   const {data, errors} = props
-  
-  console.log("index props", props)
 
   if (errors) {
     return (
@@ -98,10 +97,14 @@ const IndexPage = props => {
         <Hero />
         <Container>
           <About />
+          <Divider />
           <SocialLinks className='social-links-section' />
+          <Divider />
           <SermonVideo />
+          <Divider />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
-          {/* <Endorsement /> */}
+          <Divider />
+          <Endorsement />
         </Container>
       </Layout>
     </>
