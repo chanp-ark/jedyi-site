@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Container from '../../components/container'
-import Title from '../title'
+import Title from '../titles/title'
 import './about.styles.css'
 
 const JedImage = styled('div')`
@@ -60,6 +60,7 @@ const AboutContainer = styled('div')`
 const AboutMe = () => {
   return (
     <>
+      <div id='about' />
       <Title>Jed Yi</Title>
       <Container>
         <AboutContainer>

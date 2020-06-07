@@ -1,0 +1,9 @@
+.divider {
+  content: ' ';
+  width: 100%;
+  height: 2px;
+  background-color: #e7ebed;
+  margin: 4rem 0;
+  position: relative;
+  
+}

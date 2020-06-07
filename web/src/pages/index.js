@@ -15,6 +15,8 @@ import Hero from '../components/hero'
 import About from '../components/about/about'
 import SermonVideo from '../components/sermon/sermon'
 import SocialLinks from '../components/social-links/social-link'
+import Endorsement from '../components/endorsement/endorsements'
+import Divider from '../components/divider/divider'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -24,7 +26,7 @@ export const query = graphql`
       keywords
     }
     projects: allSanitySampleProject(
-      limit: 6
+      limit: 3
       sort: {fields: [publishedAt], order: DESC}
       filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
     ) {
@@ -90,14 +92,19 @@ const IndexPage = props => {
 
   return (
     <>
-      <Hero />
       <Layout>
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
+        <Hero />
         <Container>
           <About />
+          <Divider />
           <SocialLinks className='social-links-section' />
+          <Divider />
           <SermonVideo />
+          <Divider />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
+          <Divider />
+          <Endorsement />
         </Container>
       </Layout>
     </>

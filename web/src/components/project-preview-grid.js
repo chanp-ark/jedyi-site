@@ -1,7 +1,7 @@
 import {Link} from 'gatsby'
 import React from 'react'
 import ProjectPreview from './project-preview'
-import Title from './title'
+import Title from './titles/title'
 
 import styles from './project-preview-grid.module.css'
 

@@ -7,14 +7,14 @@ import SocialLinks from '../components/social-links/social-link'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({children, siteTitle, onHideNav, onShowNav, showNav}) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className='footer-nav'>
-          <div className='nav'>
+          <div>
             <Link to='/invite'>Invite</Link>
           </div>
           <SocialLinks className='social-links-footer' />
@@ -27,5 +27,6 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     </footer>
   </>
 )
+
 
 export default Layout

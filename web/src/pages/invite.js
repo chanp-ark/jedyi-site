@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Container from '../components/container'
 
-import Title from '../components/title'
+import PageTitle from '../components/titles/pageTitle'
 
 import '../styles/invite.styles.css'
 
@@ -28,12 +28,13 @@ const NameField = styled('label')`
     }
   }
 `
+
 const Invite = () => {
   return (
     <Layout>
       <SEO title='Speaking Request' description='Invite form to submit a speaking request' />
       <Container>
-        <Title>SPEAKING REQUEST</Title>
+        <PageTitle>SPEAKING REQUEST</PageTitle>
         <form
           name='invite'
           action='/success'

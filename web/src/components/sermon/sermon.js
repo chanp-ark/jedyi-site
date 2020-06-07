@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import Title from '../title'
+import Title from '../titles/title'
 
 import './sermon.styles.css'
 
 const MessageContainer = styled('div')`
   box-sizing: border-box;
   max-width: 820px;
-  padding: 1.5em;
+  padding: 1.5em 0;
   margin: 0 auto;
 
   @media (--media-min-small) {
@@ -18,9 +18,10 @@ const MessageContainer = styled('div')`
 
 const VideoContainer = styled('div')`
   height: 50vh;
-  width: 100%;
-  padding: 1em auto;
-
+  width: 76%;
+  padding: 1em 0;
+  margin: 0 auto;
+  
   @media (max-width: 660px) {
     height: 35vh;
     width: 100%;
@@ -32,6 +33,7 @@ const VideoContainer = styled('div')`
 const SermonVideo = () => {
   return (
     <>
+      <div id='sermon' />
       <Title>Message</Title>
       <MessageContainer>
         <VideoContainer>

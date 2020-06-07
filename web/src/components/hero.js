@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import {Link} from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import scrollTo from 'gatsby-plugin-smoothscroll'
+
 
 const ImageBackground = styled('div')`
   background-image: url('/images/brittney-butler.jpeg');
@@ -12,6 +13,31 @@ const ImageBackground = styled('div')`
   + * {
     margin-top: 0;
   }
+`
+
+const ArrowContainer = styled('button')`
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  transition: all 100ms ease-in-out;
+  transform-origin: top;
+  
+  :focus {
+    outline: none;
+  }
+  
+  :hover {
+    transform: scale(1.2);
+    color: white;
+  }
+`
+
+const Title = styled('h1')`
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
 `
 
 const TextBox = styled('div')`
@@ -40,13 +66,14 @@ const TextBox = styled('div')`
     font-size: 30px;
   }
 `
+
 const Hero = () => {
   return (
-    <ImageBackground>
+    <ImageBackground id='home'>
       <TextBox>
         <div>
-          <h1>KINGDOM COME</h1>
-          <Link to='/'>&darr;</Link>
+          <Title>KINGDOM COME</Title>
+          <ArrowContainer onClick={() => scrollTo('#about')}>&darr;</ArrowContainer>
         </div>
       </TextBox>
     </ImageBackground>
