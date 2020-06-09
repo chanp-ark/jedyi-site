@@ -4,10 +4,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 export const SocialLinks = ({className}) => (
   <div className={className}>
     <a target='_blank' href='https://www.facebook.com/jed.yi/'>
-      <FontAwesomeIcon icon={['fab', 'instagram']} />
+      <FontAwesomeIcon icon={['fab', 'facebook']} />
     </a>
     <a target='_blank' href='https://www.instagram.com/jedidiahyi/'>
-      <FontAwesomeIcon icon={['fab', 'facebook']} />
+      <FontAwesomeIcon icon={['fab', 'instagram']} />
     </a>
     <a target='_blank' href='mailto:daojedyi@gmail.com'>
       <FontAwesomeIcon icon='envelope' />
