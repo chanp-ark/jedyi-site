@@ -11,8 +11,8 @@ import {responsiveTitle1} from '../components/typography.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {
-    projects: allSanitySampleProject(
-      limit: 12
+    projects: allSanityBlog(
+      limit: 24
       sort: {fields: [publishedAt], order: DESC}
       filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
     ) {
@@ -35,7 +35,6 @@ export const query = graphql`
     }
   }
 `
-
 const ArchivePage = props => {
   const {data, errors} = props
   if (errors) {
@@ -45,6 +44,7 @@ const ArchivePage = props => {
       </Layout>
     )
   }
+  
   const projectNodes =
     data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   return (

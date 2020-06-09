@@ -23,6 +23,7 @@ const ArrowContainer = styled('button')`
   margin: 0;
   transition: all 100ms ease-in-out;
   transform-origin: top;
+  cursor: pointer;
   
   :focus {
     outline: none;

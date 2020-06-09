@@ -24,8 +24,9 @@ export const query = graphql`
       title
       description
       keywords
+      about
     }
-    projects: allSanitySampleProject(
+    projects: allSanityBlog(
       limit: 3
       sort: {fields: [publishedAt], order: DESC}
       filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
@@ -89,6 +90,7 @@ const IndexPage = props => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     )
   }
+  // console.log(site.about)
 
   return (
     <>
@@ -96,7 +98,7 @@ const IndexPage = props => {
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Hero />
         <Container>
-          <About />
+          <About content={site.about}/>
           <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />

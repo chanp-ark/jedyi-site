@@ -1,8 +1,8 @@
 import {format} from 'date-fns'
 
 export default {
-  name: 'sampleProject',
-  title: 'Sample project',
+  name: 'blog',
+  title: 'Blogs',
   type: 'document',
   fields: [
     {
@@ -38,16 +38,6 @@ export default {
       of: [{type: 'projectMember'}]
     },
     {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
-    },
-    {
       name: 'mainImage',
       title: 'Main image',
       type: 'figure'
@@ -65,9 +55,9 @@ export default {
     },
     {
       name: 'relatedProjects',
-      title: 'Related projects',
+      title: 'Related Blogs',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'sampleProject'}}]
+      of: [{type: 'reference', to: {type: 'blog'}}]
     }
   ],
   preview: {

@@ -17,10 +17,9 @@ export default {
       options: {
         layout: 'radio',
         list: [
-          {title: 'Designer', value: 'designer'},
-          {title: 'Developer', value: 'developer'},
-          {title: 'Editor', value: 'editor'},
-          {title: 'Manager', value: 'manager'}
+          {title: 'Pastor', value: 'pastor'},
+          {title: 'Ministry Leader', value: 'ministryLeader'},
+          {title: 'Student', value: 'student'}
         ]
       }
     }

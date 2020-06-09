@@ -31,6 +31,12 @@ export default {
       }
     },
     {
+      name: 'about',
+      type: 'text',
+      title: 'About',
+      description: 'Add "---" without quotes for new line'
+    },
+    {
       name: 'author',
       type: 'reference',
       description: 'Publish an author and set a reference to them here.',

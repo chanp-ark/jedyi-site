@@ -1,12 +1,12 @@
 export default {
   widgets: [
-    {
-      name: 'sanity-tutorials',
-      options: {
-        templateRepoId: 'sanity-io/sanity-template-gatsby-portfolio'
-      }
-    },
     {name: 'structure-menu'},
+    {
+      name: 'document-list',
+      options: {title: 'Blogs', order: '_createdAt desc', types: ['blog']},
+      layout: {width: 'medium'}
+    },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'project-info',
       options: {
@@ -46,12 +46,6 @@ export default {
           }
         ]
       }
-    },
-    {name: 'project-users', layout: {height: 'auto'}},
-    {
-      name: 'document-list',
-      options: {title: 'Recent projects', order: '_createdAt desc', types: ['sampleProject']},
-      layout: {width: 'medium'}
     }
   ]
 }
