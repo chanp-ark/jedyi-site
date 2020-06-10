@@ -60,6 +60,10 @@ const Biography = styled('div')`
 const AboutContainer = styled('div')`
   display: flex;
   justify-content: space-around;
+  
+  @media (max-width: 550px) {
+    display: flex;
+    flex-wrap: wrap
 `
 
 const NameContainer = styled('div')`
