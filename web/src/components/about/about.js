@@ -9,33 +9,36 @@ const JedImage = styled('div')`
   background-image: url('/images/jed-profile-about.jpg');
   background-position: top 40% center;
   background-size: cover;
-  height: 61vh;
-  max-height: 565px;
-  width: 73vh;
-  min-width: 200px;
-  max-width: 400px;
-  margin: 1rem;
+  width: 35vw;
+  margin: 0;
+  margin-right: 1em;
   
-  @media (max-width: 950px) {
-    margin: 0 1rem 1rem 1rem;
-    height: 35vh;
-    width: 32vh;
-  }
+  @media (max-width: 550px) {
+    height: 40vh;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+    
+  
 `
+
+const EmptyBox = styled('div')`
+  content: '';
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}`
 
 const Biography = styled('div')`
   @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap');  font-family: 'Playfair Display', serif;
   font-family: 'Cormorant', serif;
-  font-size: 1rem;
   font-weight: 500;
-  height: 61vh;
-  width: 73vh;
-  max-height: 565px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  min-width: 200px;
-  max-width: 390px;
-  margin: 1rem;
+  font-size: 1rem;
+  height: 100%;
+  width: 60vw;
+  
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space around;
@@ -47,23 +50,21 @@ const Biography = styled('div')`
   div {
     margin-bottom: 8px;
   }
-
-  @media (max-width: 950px) {
-    margin: 0 1rem 1rem 1rem;
-    height: 35vh;
-    width: 32vh;
-    font-size: 14px;
+  
+  @media (max-width: 550px) {
+    height: 100%;
+    width: 100%;
   }
 `
 
 const AboutContainer = styled('div')`
   display: flex;
   justify-content: space-around;
+`
 
-  @media (max-width: 950px) {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+const NameContainer = styled('div')`
+  font-size: 1.5rem;
+  margin: 0;
 `
 
 const AboutMe = ({content})=> {
@@ -72,10 +73,12 @@ const AboutMe = ({content})=> {
   return (
     <>
       <div id='about' />
-      <Title>Jed Yi</Title>
+      <NameContainer><Title>Jed Yi</Title></NameContainer>
       <Container>
         <AboutContainer>
-          <JedImage />
+          <JedImage>
+            <EmptyBox />
+          </JedImage>
           <Biography>
             {separateContent}
           </Biography>
