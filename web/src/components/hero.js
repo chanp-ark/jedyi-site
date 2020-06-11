@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import {Link} from 'gatsby'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-
 const ImageBackground = styled('div')`
   background-image: url('/images/brittney-butler.jpeg');
   background-position: top 10% center;
@@ -24,11 +23,11 @@ const ArrowContainer = styled('button')`
   transition: all 100ms ease-in-out;
   transform-origin: top;
   cursor: pointer;
-  
+
   :focus {
     outline: none;
   }
-  
+
   :hover {
     transform: scale(1.2);
     color: white;

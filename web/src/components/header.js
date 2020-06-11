@@ -8,16 +8,16 @@ import styles from './header.module.css'
 
 const Burger = styled('button')`
   cursor: pointer;
-  
+
   :hover {
-    color: #156dff
+    color: #156dff;
   }
 `
 
 const X = styled('button')`
   p:hover {
     color: #fff;
-    background-color: #156dff
+    background-color: #156dff;
   }
 `
 

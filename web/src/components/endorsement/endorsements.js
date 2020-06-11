@@ -5,7 +5,7 @@ import Title from '../titles/title'
 
 const EndorseContainer = styled('div')`
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
 `
 
 const Endorsement = () => {

@@ -21,7 +21,7 @@ const VideoContainer = styled('div')`
   width: 100%;
   padding: 1em 0;
   margin: 0 auto;
-  
+
   @media (max-width: 660px) {
     height: 35vh;
     width: 100%;
@@ -40,7 +40,7 @@ const SermonVideo = () => {
           <iframe
             width='100%'
             height='100%'
-            src='https://www.youtube.com/embed/0ZAHleKuPBw'
+            src='https://www.youtube.com/embed/V2KcuC6oUbA?start=196'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen

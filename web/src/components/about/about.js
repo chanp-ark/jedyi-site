@@ -31,18 +31,19 @@ const EmptyBox = styled('div')`
 }`
 
 const Biography = styled('div')`
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap');  font-family: 'Playfair Display', serif;
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap');
+  font-family: 'Playfair Display', serif;
   font-family: 'Cormorant', serif;
   font-weight: 500;
   font-size: 1rem;
   height: 100%;
   width: 60vw;
-  
+
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space around;
-  border: 1px solid rgba(0,0,0,0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   background-color: #fff;
   box-sizing: border-box;
   padding: 10px;
@@ -50,7 +51,7 @@ const Biography = styled('div')`
   div {
     margin-bottom: 8px;
   }
-  
+
   @media (max-width: 550px) {
     height: 100%;
     width: 100%;
@@ -71,21 +72,21 @@ const NameContainer = styled('div')`
   margin: 0;
 `
 
-const AboutMe = ({content})=> {
+const AboutMe = ({content}) => {
   console.log(content)
   const separateContent = content.split('---').map(paragraph => <div>{paragraph}</div>)
   return (
     <>
       <div id='about' />
-      <NameContainer><Title>Jed Yi</Title></NameContainer>
+      <NameContainer>
+        <Title>Jed Yi</Title>
+      </NameContainer>
       <Container>
         <AboutContainer>
           <JedImage>
             <EmptyBox />
           </JedImage>
-          <Biography>
-            {separateContent}
-          </Biography>
+          <Biography>{separateContent}</Biography>
         </AboutContainer>
       </Container>
     </>
