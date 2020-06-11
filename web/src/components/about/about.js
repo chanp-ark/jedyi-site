@@ -73,7 +73,6 @@ const NameContainer = styled('div')`
 `
 
 const AboutMe = ({content}) => {
-  console.log(content)
   const separateContent = content.split('---').map(paragraph => <div>{paragraph}</div>)
   return (
     <>

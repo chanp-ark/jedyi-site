@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import {Link} from 'gatsby'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const ImageBackground = styled('div')`

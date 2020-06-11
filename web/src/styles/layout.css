@@ -4,13 +4,24 @@ html {
   font-family: 'Cabin', sans-serif;;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow: overlay;
 }
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  width: 0px; /* change this to show scroll */
+}
 
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 10, 10, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4bcc7;
 }
 
 .footer-nav {
