@@ -62,18 +62,14 @@ const Invite = () => {
   }
 
   const handleSubmit = e => {
-    if (!checkAllInputs(info)) {
-      return e.preventDefault()
-    } else {
-      window
-        .fetch('/', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-          body: encode({'form-name': 'contact', ...info})
-        })
-        .then(() => console.log('Success!'))
-        .catch(err => console.log(err))
-    }
+    window
+      .fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: encode({'form-name': 'contact', ...info})
+      })
+      .then(() => console.log('Success!'))
+      .catch(err => console.log(err))
   }
 
   return (
