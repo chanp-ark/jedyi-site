@@ -18,7 +18,7 @@ const MessageContainer = styled('div')`
 
 const VideoContainer = styled('div')`
   height: 50vh;
-  width: 76%;
+  width: 100%;
   padding: 1em 0;
   margin: 0 auto;
   
