@@ -43,6 +43,7 @@ const SermonVideo = () => {
             src='https://www.youtube.com/embed/V2KcuC6oUbA?start=196'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+            title='jed-sermon'
             allowFullScreen
           />
         </VideoContainer>
