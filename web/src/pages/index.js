@@ -98,7 +98,7 @@ const IndexPage = props => {
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Hero />
         <Container>
-          <About content={site.about}/>
+          <About content={site.about} />
           <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />
