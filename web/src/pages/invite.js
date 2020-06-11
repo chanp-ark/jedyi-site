@@ -128,7 +128,14 @@ const Invite = () => {
           </label>
           <label>
             Name of Organization & Event
-            <input type='text' name='org' autoComplete='no' value={org} onChange={handleChange} required />
+            <input
+              type='text'
+              name='org'
+              autoComplete='no'
+              value={org}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Organization Website
@@ -159,7 +166,14 @@ const Invite = () => {
           </label>
           <label>
             City
-            <input type='text' name='city' autoComplete='no' value={city} onChange={handleChange} required />
+            <input
+              type='text'
+              name='city'
+              autoComplete='no'
+              value={city}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             State
@@ -174,7 +188,14 @@ const Invite = () => {
           </label>
           <label>
             Postal Code
-            <input type='text' name='zip' autoComplete='no' value={zip} onChange={handleChange} required />
+            <input
+              type='text'
+              name='zip'
+              autoComplete='no'
+              value={zip}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label className='how'>
             How did you hear about Jed Yi?
