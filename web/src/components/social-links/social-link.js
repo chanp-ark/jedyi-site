@@ -1,7 +1,7 @@
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-export const SocialLinks = ({className}) => (
+const SocialLinks = ({className}) => (
   <div className={className}>
     <a target='_blank' href='https://www.facebook.com/jed.yi/'>
       <FontAwesomeIcon icon={['fab', 'facebook']} />

@@ -13,13 +13,25 @@ const JedImage = styled('div')`
   margin: 0;
   margin-right: 1em;
   
-  @media (max-width: 550px) {
+  @media (max-width: 985px) {
+    height: 50vh;
+    width: 75%;
+    margin: 0;
+    margin-bottom: 1em;
+  
+  @media (max-width: 650px) {
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  
+  @media (max-width: 500px) {
     height: 40vh;
     width: 100%;
     margin: 0;
     margin-bottom: 1em;
-    
-  
+  }
 `
 
 const EmptyBox = styled('div')`
@@ -52,7 +64,12 @@ const Biography = styled('div')`
     margin-bottom: 8px;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 985px) {
+    height: 100%;
+    width: 80%;
+  }
+
+  @media (max-width: 650px) {
     height: 100%;
     width: 100%;
   }
@@ -62,24 +79,17 @@ const AboutContainer = styled('div')`
   display: flex;
   justify-content: space-around;
   
-  @media (max-width: 550px) {
+  @media (max-width: 985px) {
     display: flex;
     flex-wrap: wrap
 `
 
-const NameContainer = styled('div')`
-  font-size: 1.5rem;
-  margin: 0;
-`
-
 const AboutMe = ({content}) => {
-  const separateContent = content.split('---').map(paragraph => <div>{paragraph}</div>)
+  const separateContent = content.split('---').map((paragraph, i) => <div key={i}>{paragraph}</div>)
   return (
     <>
       <div id='about' />
-      <NameContainer>
-        <Title>Jed Yi</Title>
-      </NameContainer>
+      <Title>Jed Yi</Title>
       <Container>
         <AboutContainer>
           <JedImage>
