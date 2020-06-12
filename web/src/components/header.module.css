@@ -13,7 +13,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
-  padding: 1em;
+  padding: 0.2em 1em;
   
   @media(--media-max-small) {
     padding: 0;
@@ -23,6 +23,7 @@
 .branding {
   font-weight: 600;
   flex: 1;
+  padding-left: 0.3em;
 
   @nest & a {
     display: inline-block;
