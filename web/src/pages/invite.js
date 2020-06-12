@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
+import {navigate} from 'gatsby'
 import styled from '@emotion/styled'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Container from '../components/container'
 
 import PageTitle from '../components/titles/pageTitle'
-import {checkAllInputs} from '../lib/validate'
 
 import '../styles/invite.styles.css'
 
@@ -69,6 +69,9 @@ const Invite = () => {
         body: encode({'form-name': 'contact', ...info})
       })
       .then(() => console.log('Success!'))
+      .then(() => {
+        navigate('/success')
+      })
       .catch(err => console.log(err))
   }
 
