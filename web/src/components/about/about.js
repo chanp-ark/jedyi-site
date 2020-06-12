@@ -6,7 +6,7 @@ import Title from '../titles/title'
 import './about.styles.css'
 
 const JedImage = styled('div')`
-  background-image: url('/images/jed-profile-about.jpg');
+  background-image: url('/images/jed-profile-opt.jpg');
   background-position: top 40% center;
   background-size: cover;
   width: 35vw;
