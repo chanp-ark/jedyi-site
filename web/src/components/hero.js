@@ -72,7 +72,7 @@ const Hero = () => {
       <TextBox>
         <div>
           <Title>KINGDOM COME</Title>
-          <ArrowContainer onClick={() => scrollTo('#about')}>&darr;</ArrowContainer>
+          <ArrowContainer aria-label='scroll-down' onClick={() => scrollTo('#about')}>&darr;</ArrowContainer>
         </div>
       </TextBox>
     </ImageBackground>

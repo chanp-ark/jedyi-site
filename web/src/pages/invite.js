@@ -211,7 +211,7 @@ const Invite = () => {
               required
             />
           </label>
-          <button type='submit'>Send</button>
+          <button type='submit' aria-label='send'>Send</button>
         </form>
       </Container>
     </Layout>
