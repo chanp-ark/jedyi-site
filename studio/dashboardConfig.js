@@ -41,7 +41,7 @@ export default {
           },
           {
             title: 'Frontend',
-            value: 'https://jedyi-site.netlify.app',
+            value: 'https://jedyi.com',
             category: 'apps'
           }
         ]

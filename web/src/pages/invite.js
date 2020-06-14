@@ -31,56 +31,15 @@ const NameField = styled('label')`
 `
 
 const Invite = () => {
-  const initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    org: '',
-    website: '',
-    when: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    mutual: ''
-  }
-
-  const [info, setInfo] = useState(initialState)
-
-  const {first, last, email, phone, org, website, when, address, city, state, zip, mutual} = info
-
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
-
-  const handleChange = e => {
-    e.preventDefault()
-    setInfo({...info, [e.target.name]: e.target.value})
-  }
-
-  const handleSubmit = e => {
-    window
-      .fetch('/', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: encode({'form-name': 'contact', ...info})
-      })
-      .then(() => console.log('Success!'))
-      .then(() => {
-        navigate('/success')
-      })
-      .catch(err => console.log(err))
-  }
-
+ 
   return (
     <Layout>
       <SEO title='Speaking Request' description='Invite form to submit a speaking request' />
       <Container>
         <PageTitle>SPEAKING REQUEST</PageTitle>
-        <form onSubmit={handleSubmit}>
+        <form method="post" action='/success' netlify-honeypot="bot-field" data-netlify="true" >
+        <input type="hidden" name="bot-field" />
+
           <label>Name</label>
           <NameField>
             <div>
@@ -88,8 +47,6 @@ const Invite = () => {
                 type='text'
                 name='firstName'
                 autoComplete='no'
-                value={first}
-                onChange={handleChange}
                 required
               />
               <p>first</p>
@@ -100,8 +57,6 @@ const Invite = () => {
                 type='text'
                 name='lastName'
                 autoComplete='no'
-                value={last}
-                onChange={handleChange}
                 required
               />
               <p>last</p>
@@ -113,8 +68,6 @@ const Invite = () => {
               type='email'
               name='email'
               autoComplete='no'
-              value={email}
-              onChange={handleChange}
               required
             />
           </label>
@@ -124,8 +77,6 @@ const Invite = () => {
               type='text'
               name='phone'
               autoComplete='no'
-              value={phone}
-              onChange={handleChange}
               required
             />
           </label>
@@ -135,8 +86,6 @@ const Invite = () => {
               type='text'
               name='org'
               autoComplete='no'
-              value={org}
-              onChange={handleChange}
               required
             />
           </label>
@@ -146,14 +95,12 @@ const Invite = () => {
               type='text'
               name='website'
               autoComplete='no'
-              value={website}
-              onChange={handleChange}
               required
             />
           </label>
           <label>
             Speaking Date(s) + Time(s)
-            <input type='text' name='when' autoComplete='no' value={when} onChange={handleChange} />
+            <input type='text' name='when' autoComplete='no' />
           </label>
           <label className='speaking-venue'>VENUE</label>
           <label>
@@ -162,8 +109,6 @@ const Invite = () => {
               type='text'
               name='address'
               autoComplete='no'
-              value={address}
-              onChange={handleChange}
               required
             />
           </label>
@@ -173,8 +118,6 @@ const Invite = () => {
               type='text'
               name='city'
               autoComplete='no'
-              value={city}
-              onChange={handleChange}
               required
             />
           </label>
@@ -184,8 +127,6 @@ const Invite = () => {
               type='text'
               name='state'
               autoComplete='no'
-              value={state}
-              onChange={handleChange}
               required
             />
           </label>
@@ -195,8 +136,6 @@ const Invite = () => {
               type='text'
               name='zip'
               autoComplete='no'
-              value={zip}
-              onChange={handleChange}
               required
             />
           </label>
@@ -206,8 +145,6 @@ const Invite = () => {
               type='text'
               name='mutual'
               autoComplete='no'
-              value={mutual}
-              onChange={handleChange}
               required
             />
           </label>
