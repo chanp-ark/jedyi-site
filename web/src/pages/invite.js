@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from '@emotion/styled'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Container from '../components/container'
 import isMobilePhone from 'validator/lib/isMobilePhone'
+import isEmail from 'validator/lib/isEmail'
 
 import PageTitle from '../components/titles/pageTitle'
 
@@ -42,9 +43,24 @@ const InvalidLabel = styled('p')`
   `
 
 const Invite = () => {
+
+  const [disable, setDisable] = useState(true)
   
-  const [disable, setDisable] = React.useState(true)
-  
+  const validateEmail = (e, email) => {
+    const isValidEmail = isEmail(email)
+    const inputStyle = e.target.style
+    const invalidTag = document.getElementById('invalidEmail')
+    if (!isValidEmail) {
+      inputStyle.border = '2px solid rgba(255, 50, 50)'
+      invalidTag.style.display = 'block'
+      setDisable(false)
+    } else {
+      inputStyle.border = '1px solid rgb(220, 225, 229)'
+      invalidTag.style.display = 'none'
+      setDisable(true)
+    }
+  }
+
   const validatePhoneNumber = (e, number) => {
     const isValid = isMobilePhone(number, 'en-US')
     const inputStyle = e.target.style
@@ -87,7 +103,8 @@ const Invite = () => {
           </NameField>
           <label>
             Email Address
-            <input type='email' name='email' autoComplete='no' required />
+            <InvalidLabel id='invalidEmail'>Please enter a valid email</InvalidLabel>
+            <input type='email' name='email' autoComplete='no' required onBlur={e => validateEmail(e, e.target.value)} />
           </label>
           <label>
             Phone

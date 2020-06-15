@@ -16,6 +16,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-smoothscroll',
+    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -23,6 +24,14 @@ module.exports = {
         token,
         watchMode: !isProd,
         overlayDrafts: !isProd && token
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Cormorant', 'Cabin']
+        }
       }
     }
   ]

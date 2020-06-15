@@ -43,10 +43,9 @@ const EmptyBox = styled('div')`
 }`
 
 const Biography = styled('div')`
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&display=swap');
   font-family: 'Cormorant', serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   height: 100%;
   width: 60vw;
   margin: 0;
