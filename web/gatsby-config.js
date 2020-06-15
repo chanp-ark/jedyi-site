@@ -33,6 +33,17 @@ module.exports = {
           families: ['Cormorant', 'Cabin']
         }
       }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`
+          },
+          `gatsby-remark-lazy-load`
+        ]
+      }
     }
   ]
 }

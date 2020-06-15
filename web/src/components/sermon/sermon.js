@@ -31,6 +31,18 @@ const VideoContainer = styled('div')`
 `
 
 const SermonVideo = () => {
+  
+  const initVideo = () => {
+    const vidDefer = document.getElementsByTagName('iframe')
+    for (let i = 0; i < vidDefer.length; i++) {
+      if (vidDefer[i].getAttribute('data-src')) {
+        vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'))
+      }
+    }
+  }
+  
+  window.onload = initVideo()
+  
   return (
     <>
       <div id='sermon' />
@@ -38,9 +50,11 @@ const SermonVideo = () => {
       <MessageContainer>
         <VideoContainer>
           <iframe
+            className='lazyload'
             width='100%'
             height='100%'
-            src='https://www.youtube.com/embed/V2KcuC6oUbA?start=196'
+            data-src='https://www.youtube.com/embed/V2KcuC6oUbA?start=196'
+            src=''
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             title='jed-sermon'
