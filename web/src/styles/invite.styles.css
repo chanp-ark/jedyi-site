@@ -61,8 +61,19 @@ input {
   margin-bottom: 8px;
 }
 
-button {
+.enable {
   width: 4rem;
   margin: 2rem auto 0 auto;
   height: 2rem;
+}
+
+.disable {
+  width: 4rem;
+  margin: 2rem auto 0 auto;
+  height: 2rem;
+  pointer-events: none;
+  cursor: default;
+  font-style: italic;
+  background-color: #697a90;
+  box-shadow: none;
 }

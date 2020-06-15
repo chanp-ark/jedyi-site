@@ -26,7 +26,11 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
     <div className={styles.wrapper}>
       <div className={styles.branding}>
         <Link to='/'>J | Y</Link>
-        <Burger aria-label='nav-icon' className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
+        <Burger
+          aria-label='nav-icon'
+          className={styles.toggleNavButton}
+          onClick={showNav ? onHideNav : onShowNav}
+        >
           <Icon symbol='hamburger' />
         </Burger>
       </div>
