@@ -44,6 +44,7 @@ const SermonVideo = () => {
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             title='jed-sermon'
+            rel='noopener'
             allowFullScreen
           />
         </VideoContainer>
