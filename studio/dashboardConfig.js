@@ -1,7 +1,7 @@
 export default {
   widgets: [
     {name: 'structure-menu'},
-    {name: 'project-users', layout: {height: 'auto'}},
+    {name: 'project-users', layout: {height: 'auto', width: 'auto'}},
     {
       name: 'project-info',
       options: {
