@@ -1,7 +1,6 @@
 import isMobilePhone from 'validator/lib/isMobilePhone'
 import isEmail from 'validator/lib/isEmail'
 
-
 export const validateEmail = (e, email) => {
   const isValid = isEmail(email)
   const inputStyle = e.target.style
@@ -17,7 +16,6 @@ export const validateEmail = (e, email) => {
   }
 }
 
-  
 export const validatePhoneNumber = (e, number) => {
   const isValid = isMobilePhone(number, 'en-US')
   const inputStyle = e.target.style

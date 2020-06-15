@@ -40,12 +40,11 @@ const InvalidLabel = styled('p')`
   padding: 0;
   position: relative;
   display: none;
-  `
+`
 
 const Invite = () => {
-
   const [disable, setDisable] = useState(true)
-  
+
   const validateEmail = (e, email) => {
     const isValidEmail = isEmail(email)
     const inputStyle = e.target.style
@@ -104,12 +103,24 @@ const Invite = () => {
           <label>
             Email Address
             <InvalidLabel id='invalidEmail'>Please enter a valid email</InvalidLabel>
-            <input type='email' name='email' autoComplete='no' required onBlur={e => validateEmail(e, e.target.value)} />
+            <input
+              type='email'
+              name='email'
+              autoComplete='no'
+              required
+              onBlur={e => validateEmail(e, e.target.value)}
+            />
           </label>
           <label>
             Phone
             <InvalidLabel id='invalidNum'>Please enter a valid phone number</InvalidLabel>
-            <input type='text' name='phone' autoComplete='no' required onBlur={e => validatePhoneNumber(e, e.target.value)} />
+            <input
+              type='text'
+              name='phone'
+              autoComplete='no'
+              required
+              onBlur={e => validatePhoneNumber(e, e.target.value)}
+            />
           </label>
           <label>
             Name of Organization & Event

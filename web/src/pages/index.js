@@ -17,6 +17,7 @@ import SermonVideo from '../components/sermon/sermon'
 import SocialLinks from '../components/social-links/social-link'
 import Endorsement from '../components/endorsement/endorsements'
 import Divider from '../components/divider/divider'
+import Spotify from '../components/spotify'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -107,6 +108,8 @@ const IndexPage = props => {
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
           <Endorsement />
+          <Divider />
+          <Spotify />
         </Container>
       </Layout>
     </>

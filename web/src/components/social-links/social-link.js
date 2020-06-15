@@ -6,7 +6,12 @@ const SocialLinks = ({className}) => (
     <a target='_blank' aria-label='Facebook' rel='noopener' href='https://www.facebook.com/jed.yi/'>
       <FontAwesomeIcon icon={['fab', 'facebook']} />
     </a>
-    <a target='_blank' aria-label='Instagram' rel='noopener' href='https://www.instagram.com/jedidiahyi/'>
+    <a
+      target='_blank'
+      aria-label='Instagram'
+      rel='noopener'
+      href='https://www.instagram.com/jedidiahyi/'
+    >
       <FontAwesomeIcon icon={['fab', 'instagram']} />
     </a>
     <a target='_blank' aria-label='Email' rel='noopener' href='mailto:daojedyi@gmail.com'>

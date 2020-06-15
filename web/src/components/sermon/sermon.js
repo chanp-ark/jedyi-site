@@ -31,7 +31,6 @@ const VideoContainer = styled('div')`
 `
 
 const SermonVideo = () => {
-  
   return (
     <>
       <div id='sermon' />
