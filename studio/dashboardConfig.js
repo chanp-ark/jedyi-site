@@ -1,11 +1,6 @@
 export default {
   widgets: [
     {name: 'structure-menu'},
-    {
-      name: 'document-list',
-      options: {title: 'Blogs', order: '_createdAt desc', types: ['blog']},
-      layout: {width: 'medium'}
-    },
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'project-info',
@@ -15,7 +10,7 @@ export default {
             name: 'netlify',
             options: {
               description:
-                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
+                'NOTE: Contact Chan if you ever see "Failed"',
               sites: [
                 {
                   buildHookId: '5ed2da2302b14983a5b58d90',
