@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "validator": "^13.1.1"
   }
 }
