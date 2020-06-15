@@ -107,8 +107,8 @@ const IndexPage = props => {
           <Divider />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
-          <Endorsement />
-          <Divider />
+          {/* <Endorsement />
+          <Divider /> */}
           <Spotify />
         </Container>
       </Layout>
