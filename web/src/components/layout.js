@@ -14,8 +14,10 @@ const Layout = ({children, siteTitle, onHideNav, onShowNav, showNav}) => (
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className='footer-nav'>
-          <div>
-            <Link to='/invite'>Invite</Link>
+          <div className='inside-nav'>
+            <Link to='/blogs/'>Blogs</Link>
+            <Link to='/itinerary/'>Itinerary</Link>
+            <Link to='/invite/'>Invite</Link>
           </div>
           <SocialLinks className='social-links-footer' />
         </div>

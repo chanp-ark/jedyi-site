@@ -44,6 +44,9 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
             <Link to='/blogs/'>Blogs</Link>
           </li>
           <li>
+            <Link to='/itinerary/'>Itinerary</Link>
+          </li>
+          <li>
             <Link to='/invite/'>Invite</Link>
           </li>
         </ul>
