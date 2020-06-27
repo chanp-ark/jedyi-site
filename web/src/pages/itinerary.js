@@ -52,9 +52,13 @@ const Itinerary = ({ data }) => {
                 {i === 0 && <Divider />}
                 <EventName>{event.title}</EventName>
                 <div>{event.location}</div>
-                <div>
-                  {event.startDate} to {event.endDate}
-                </div>
+                {event.startDate !== event.endDate ? (
+                  <div>
+                    {event.startDate} to {event.endDate}
+                  </div>
+                ) : (
+                  <div>{event.startDate}</div>
+                )}
                 <Divider />
               </div>
             )

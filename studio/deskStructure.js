@@ -20,7 +20,7 @@ export default () =>
         .title('People')
         .schemaType('person')
         .child(S.documentTypeList('person').title('People')),
-      
+
       S.listItem()
         .title('Categories')
         .schemaType('category')
