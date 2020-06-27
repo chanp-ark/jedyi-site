@@ -1,0 +1,9 @@
+.past-event {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.not-yet {
+  text-decoration: none;
+  opacity: 1;
+}

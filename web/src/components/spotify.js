@@ -12,7 +12,7 @@ const Spotify = () => (
       width='100%'
       height='380'
       frameBorder='0'
-      allowTransparency='true'
+      // allowTransparency='true'
       allow='encrypted-media'
     />
   </>

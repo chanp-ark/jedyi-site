@@ -18,7 +18,7 @@ const EventContainer = styled('div')`
 
 const EventName = styled('div')`
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 `
 
 export const query = graphql`
@@ -39,7 +39,12 @@ export const query = graphql`
 const Itinerary = ({ data }) => {
   const allEvents = mapEdgesToNodes(data.events)
   allEvents.sort((a, b) => Date.parse(b.startDate) - Date.parse(a.startDate))
-
+  
+  const today = new Date()
+  console.log('today: ')
+  console.log(today, Date.parse(today) )
+  console.log('start date:')
+  console.log(allEvents[0].startDate, Date.parse(allEvents[0].startDate))
   return (
     <Layout>
       <SEO title='Speaking Itinerary' description='Dates and locations of speaking engagements' />
@@ -48,7 +53,7 @@ const Itinerary = ({ data }) => {
         <EventContainer>
           {allEvents.map((event, i) => {
             return (
-              <div key={i}>
+              <div key={i} className={ Date.parse(event.startDate) < Date.parse(today) - 86400000 ? 'past-event' : 'not-yet'}>
                 {i === 0 && <Divider />}
                 <EventName>{event.title}</EventName>
                 <div>{event.location}</div>
