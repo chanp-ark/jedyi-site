@@ -8,8 +8,7 @@ export default {
           {
             name: 'netlify',
             options: {
-              description:
-                'NOTE: Contact Chan if you ever see "Failed"',
+              description: 'NOTE: Contact Chan if you ever see "Failed"',
               sites: [
                 {
                   buildHookId: '5ed2da2302b14983a5b58d90',

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import Header from './header'
 
 import SocialLinks from '../components/social-links/social-link'
@@ -7,7 +7,7 @@ import SocialLinks from '../components/social-links/social-link'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({children, siteTitle, onHideNav, onShowNav, showNav}) => (
+const Layout = ({ children, siteTitle, onHideNav, onShowNav, showNav }) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
     <div className={styles.content}>{children}</div>

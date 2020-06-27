@@ -1,17 +1,17 @@
-import {graphql, StaticQuery} from 'gatsby'
-import React, {useState} from 'react'
+import { graphql, StaticQuery } from 'gatsby'
+import React, { useState } from 'react'
 
 import Layout from '../components/layout'
 
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {fab} from '@fortawesome/free-brands-svg-icons'
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faEnvelope)
 
 const query = graphql`
   query SiteTitleQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
@@ -21,7 +21,7 @@ import Spotify from '../components/spotify'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
@@ -29,8 +29,8 @@ export const query = graphql`
     }
     projects: allSanityBlog(
       limit: 3
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {
         node {
@@ -69,7 +69,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
 
   if (errors) {
     return (

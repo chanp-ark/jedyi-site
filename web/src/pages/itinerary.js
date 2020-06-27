@@ -4,10 +4,9 @@ import Layout from '../containers/layout'
 import Container from '../components/container'
 import PageTitle from '../components/titles/pageTitle'
 import styled from '@emotion/styled'
-import {graphql} from 'gatsby'
-import {mapEdgesToNodes} from '../lib/helpers'
+import { graphql } from 'gatsby'
+import { mapEdgesToNodes } from '../lib/helpers'
 import Divider from '../components/divider/divider'
-
 
 import '../styles/itinerary.css'
 
@@ -37,10 +36,10 @@ export const query = graphql`
   }
 `
 
-const Itinerary = ( {data} ) => {
+const Itinerary = ({ data }) => {
   const allEvents = mapEdgesToNodes(data.events)
   allEvents.sort((a, b) => Date.parse(b.startDate) - Date.parse(a.startDate))
-  
+
   return (
     <Layout>
       <SEO title='Speaking Itinerary' description='Dates and locations of speaking engagements' />
@@ -53,10 +52,13 @@ const Itinerary = ( {data} ) => {
                 {i === 0 && <Divider />}
                 <EventName>{event.title}</EventName>
                 <div>{event.location}</div>
-                <div>{event.startDate} to {event.endDate}</div>
+                <div>
+                  {event.startDate} to {event.endDate}
+                </div>
                 <Divider />
               </div>
-            ) })}
+            )
+          })}
         </EventContainer>
       </Container>
     </Layout>

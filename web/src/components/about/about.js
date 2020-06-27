@@ -81,7 +81,7 @@ const AboutContainer = styled('div')`
     flex-wrap: wrap
 `
 
-const AboutMe = ({content}) => {
+const AboutMe = ({ content }) => {
   const separateContent = content.split('---').map((paragraph, i) => <div key={i}>{paragraph}</div>)
   return (
     <>

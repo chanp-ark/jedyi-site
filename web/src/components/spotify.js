@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from '../components/titles/title'
 
-
 const Spotify = () => (
   <>
     <Title>Spotify</Title>
@@ -13,7 +12,7 @@ const Spotify = () => (
       width='100%'
       height='380'
       frameBorder='0'
-      allowtransparency='true'
+      allowTransparency='true'
       allow='encrypted-media'
     />
   </>
