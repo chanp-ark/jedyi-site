@@ -9,6 +9,7 @@ import category from './documents/category'
 import person from './documents/person'
 import blog from './documents/blog'
 import event from './documents/event'
+import picture from './documents/picture'
 import siteSettings from './documents/siteSettings'
 
 // Object types
@@ -35,6 +36,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     category,
+    picture,
     person,
     blog,
     event,

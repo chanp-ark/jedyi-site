@@ -65,6 +65,18 @@ export const query = graphql`
         }
       }
     }
+    pictures: allSanityPicture {
+      edges {
+        node {
+          image {
+            asset {
+              url
+            }
+          }
+          name
+        }
+      }
+    }
   }
 `
 
@@ -85,7 +97,6 @@ const IndexPage = props => {
       .filter(filterOutDocsWithoutSlugs)
       .filter(filterOutDocsPublishedInTheFuture)
     : []
-
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
@@ -99,7 +110,7 @@ const IndexPage = props => {
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Hero />
         <Container>
-          <About content={site.about} />
+          <About content={site.about} pictures={data.pictures} />
           <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />

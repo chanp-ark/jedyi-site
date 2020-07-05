@@ -14,3 +14,27 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.about-pics {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  top: 50%;
+  bottom: 50%;
+}
+
+.about-pics div{
+  color: #fff;
+  opacity: 0.7;
+  background: transparent;
+}
+
+.about-pics div:focus{
+  outline:none;
+}
+
+.about-pics div:hover{
+  opacity: 1;
+}
+

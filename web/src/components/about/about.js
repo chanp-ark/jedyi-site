@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import Container from '../../components/container'
 import Title from '../titles/title'
+import { mapEdgesToNodes } from '../../lib/helpers'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './about.styles.css'
 
 const JedImage = styled('div')`
-  background-image: url('/images/jed-profile-opt.jpg');
-  background-position: top 40% center;
+  background-position: top 30% center;
   background-size: cover;
-  width: 35vw;
+  width: 45vw;
   margin: 0;
   margin-right: 1em;
   
@@ -35,10 +36,8 @@ const JedImage = styled('div')`
 `
 
 const EmptyBox = styled('div')`
-  content: '';
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 50% 0;
 
 }`
 
@@ -81,17 +80,60 @@ const AboutContainer = styled('div')`
     flex-wrap: wrap
 `
 
-const AboutMe = ({ content }) => {
+const AboutMe = ({ content, pictures }) => {
   const separateContent = content.split('---').map((paragraph, i) => <div key={i}>{paragraph}</div>)
+  const allPictures = mapEdgesToNodes(pictures).sort((a, b) => a.name - b.name)
+  const [track, setTrack] = useState(0)
+
+  const handleClickRight = e => {
+    e.preventDefault()
+    if (track === allPictures.length - 1) {
+      setTrack(0)
+    } else {
+      setTrack(track + 1)
+    }
+  }
+
+  const handleClickLeft = e => {
+    e.preventDefault()
+    if (track === 0) {
+      setTrack(allPictures.length - 1)
+    } else {
+      setTrack(track - 1)
+    }
+  }
+  console.log('track', track, allPictures.length)
   return (
     <>
       <div id='about' />
       <Title>Jed Yi</Title>
       <Container>
         <AboutContainer>
-          <JedImage>
-            <EmptyBox />
-          </JedImage>
+          {allPictures.map((picture, i) => {
+            const picURL = picture.image.asset.url
+            if (track === i) {
+              return (
+                <JedImage key={i} style={{ backgroundImage: `url(${picURL})` }}>
+                  <EmptyBox>
+                    <div className='about-pics'>
+                      <div disabled={i === 0} onClick={handleClickLeft} style={{fontSize: '2rem', padding: '0.1em'}}>
+                        <FontAwesomeIcon icon='chevron-left' /> 
+                      </div>
+                      <div
+                        disabled={i === allPictures.length - 1}
+                        onClick={handleClickRight}
+                        style={{fontSize: '2rem', padding: '0.1em'}}
+                      >
+                        <FontAwesomeIcon icon='chevron-right' />
+
+                      </div>
+                    </div>
+                  </EmptyBox>
+                </JedImage>
+              )
+            }
+          })}
+
           <Biography>{separateContent}</Biography>
         </AboutContainer>
       </Container>
