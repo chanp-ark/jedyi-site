@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import Container from '../../components/container'
 import Title from '../titles/title'
@@ -10,7 +10,7 @@ import './about.styles.css'
 const JedImage = styled('div')`
   background-position: top 30% center;
   background-size: cover;
-  width: 45vw;
+  width: 50vw;
   margin: 0;
   margin-right: 1em;
   
@@ -102,7 +102,7 @@ const AboutMe = ({ content, pictures }) => {
       setTrack(track - 1)
     }
   }
-  console.log('track', track, allPictures.length)
+
   return (
     <>
       <div id='about' />
@@ -116,16 +116,19 @@ const AboutMe = ({ content, pictures }) => {
                 <JedImage key={i} style={{ backgroundImage: `url(${picURL})` }}>
                   <EmptyBox>
                     <div className='about-pics'>
-                      <div disabled={i === 0} onClick={handleClickLeft} style={{fontSize: '2rem', padding: '0.1em'}}>
-                        <FontAwesomeIcon icon='chevron-left' /> 
+                      <div
+                        disabled={i === 0}
+                        onClick={handleClickLeft}
+                        style={{ fontSize: '2rem', padding: '0.1em' }}
+                      >
+                        <FontAwesomeIcon icon='chevron-left' />
                       </div>
                       <div
                         disabled={i === allPictures.length - 1}
                         onClick={handleClickRight}
-                        style={{fontSize: '2rem', padding: '0.1em'}}
+                        style={{ fontSize: '2rem', padding: '0.1em' }}
                       >
                         <FontAwesomeIcon icon='chevron-right' />
-
                       </div>
                     </div>
                   </EmptyBox>
