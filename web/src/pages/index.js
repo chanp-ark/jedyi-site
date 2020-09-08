@@ -114,12 +114,12 @@ const IndexPage = props => {
           <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />
-          <SermonVideo />
-          <Divider />
+          {/* <SermonVideo /> */}
+          {/* <Divider /> */}
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
-          {/* <Endorsement />
-          <Divider /> */}
+          <Endorsement />
+          <Divider />
           <Spotify />
         </Container>
       </Layout>
