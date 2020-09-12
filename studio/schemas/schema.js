@@ -10,6 +10,7 @@ import person from './documents/person'
 import blog from './documents/blog'
 import event from './documents/event'
 import picture from './documents/picture'
+import endorsements from './documents/endorsements'
 import siteSettings from './documents/siteSettings'
 
 // Object types
@@ -40,6 +41,7 @@ export default createSchema({
     person,
     blog,
     event,
+    endorsements,
     siteSettings
   ])
 })
