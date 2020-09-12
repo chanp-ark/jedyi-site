@@ -7,13 +7,13 @@ import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 
+
 import '../styles/itinerary.css'
-import Endorsements from '../components/endorsement/endorsements'
 
 
 const ContainEach = styled('div')`
   display: flex;
-  margin: 1rem;
+  margin: 3rem 1rem;
   padding: 1rem;
   justify-content: space-between;
 
@@ -43,7 +43,7 @@ const CommentContainer = styled('div')`
 
 const Picture = styled('div')`
   height: 300px;
-  width: 200px;
+  width: 300px;
   background-position: top 30% center;
   background-size: cover;
 
@@ -55,10 +55,12 @@ const Picture = styled('div')`
 
 const Name = styled('div')`
   font-size: 1.8rem;
+  font-weight: 700;
 `
 
 const Title = styled('div')`
   font-size: 1.1rem;
+  font-weight: 600;
 
 `
 
@@ -70,7 +72,7 @@ const Comment = styled('div')`
 
 export const query = graphql`
   query MainFetchEndorsements {
-    allSanityEndorsements {
+    endo: allSanityEndorsements {
       edges {
         node {
           comment
@@ -88,21 +90,15 @@ export const query = graphql`
 `
 
 
-const Endorsement = ({data})=> {
-  
-  const endorsements = mapEdgesToNodes(data.allSanityEndorsements)
-  console.log("map edges to nodes", endorsements) 
-
-
+const Endorsement = ( {data} )=> {
+  const endorsements = mapEdgesToNodes(data.endo)
+  console.log(endorsements)
   return (
     <Layout>
       <SEO title='Endorsements' description='Endorsements of Jed Yi from Christian leaders' />
       <Container>
         <PageTitle>Endorsements</PageTitle>
         { endorsements.map((endorsement, i) => {
-          console.log("endorsement", endorsement.comment)
-          console.log("endorsement", endorsement.title)
-          console.log("endorsement", endorsement.organization)
           const imageLink = endorsement.mainImage.asset.url
           return(
             <ContainEach key={i}>

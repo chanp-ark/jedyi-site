@@ -15,7 +15,7 @@ import Hero from '../components/hero'
 import About from '../components/about/about'
 import SermonVideo from '../components/sermon/sermon'
 import SocialLinks from '../components/social-links/social-link'
-import Endorsement from '../components/endorsement/endorsements'
+import EndorseLayout from '../components/endorsement/endorsement-layout'
 import Divider from '../components/divider/divider'
 import Spotify from '../components/spotify'
 
@@ -77,6 +77,20 @@ export const query = graphql`
         }
       }
     }
+    endorses: allSanityEndorsements {
+      edges {
+        node {
+          comment
+          organization
+          title
+          mainImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `
 
@@ -102,8 +116,11 @@ const IndexPage = props => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     )
   }
-  // console.log(site.about)
 
+  const endorseNodes = (data || {}).endorses
+    ? mapEdgesToNodes(data.endorses)
+    : []
+  
   return (
     <>
       <Layout>
@@ -118,7 +135,9 @@ const IndexPage = props => {
           {/* <Divider /> */}
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
-          <Endorsement />
+          {/* <Endorsement endorseNodes = {endorseNodes} /> */}
+          <EndorseLayout endorseNodes = {endorseNodes} />
+
           <Divider />
           <Spotify />
         </Container>

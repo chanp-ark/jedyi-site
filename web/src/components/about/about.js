@@ -107,39 +107,37 @@ const AboutMe = ({ content, pictures }) => {
     <>
       <div id='about' />
       <Title>Jed Yi</Title>
-      <Container>
-        <AboutContainer>
-          {allPictures.map((picture, i) => {
-            const picURL = picture.image.asset.url
-            if (track === i) {
-              return (
-                <JedImage key={i} style={{ backgroundImage: `url(${picURL})` }}>
-                  <EmptyBox>
-                    <div className='about-pics'>
-                      <div
-                        disabled={i === 0}
-                        onClick={handleClickLeft}
-                        style={{ fontSize: '2rem', padding: '0.1em' }}
-                      >
-                        <FontAwesomeIcon icon='chevron-left' />
-                      </div>
-                      <div
-                        disabled={i === allPictures.length - 1}
-                        onClick={handleClickRight}
-                        style={{ fontSize: '2rem', padding: '0.1em' }}
-                      >
-                        <FontAwesomeIcon icon='chevron-right' />
-                      </div>
+      <AboutContainer>
+        {allPictures.map((picture, i) => {
+          const picURL = picture.image.asset.url
+          if (track === i) {
+            return (
+              <JedImage key={i} style={{ backgroundImage: `url(${picURL})` }}>
+                <EmptyBox>
+                  <div className='about-pics'>
+                    <div
+                      disabled={i === 0}
+                      onClick={handleClickLeft}
+                      style={{ fontSize: '2rem', padding: '0.1em' }}
+                    >
+                      <FontAwesomeIcon icon='chevron-left' />
                     </div>
-                  </EmptyBox>
-                </JedImage>
-              )
-            }
-          })}
+                    <div
+                      disabled={i === allPictures.length - 1}
+                      onClick={handleClickRight}
+                      style={{ fontSize: '2rem', padding: '0.1em' }}
+                    >
+                      <FontAwesomeIcon icon='chevron-right' />
+                    </div>
+                  </div>
+                </EmptyBox>
+              </JedImage>
+            )
+          }
+        })}
 
-          <Biography>{separateContent}</Biography>
-        </AboutContainer>
-      </Container>
+        <Biography>{separateContent}</Biography>
+      </AboutContainer>
     </>
   )
 }
