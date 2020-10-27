@@ -33,10 +33,15 @@ const ArrowContainer = styled('button')`
   }
 `
 
-const Title = styled('h1')`
+const Title = styled('p')`
   margin: 0;
   margin-bottom: 1rem;
   padding: 0;
+  font-size: 2.4rem;
+
+  @media (max-width: 500px) {
+    padding: 1rem
+  }
 `
 
 const TextBox = styled('div')`
@@ -71,7 +76,7 @@ const Hero = () => {
     <ImageBackground id='home'>
       <TextBox>
         <div>
-          <Title>KINGDOM COME</Title>
+          <Title>Till Christ is Formed in Us</Title>
           <ArrowContainer aria-label='scroll-down' onClick={() => scrollTo('#about')}>
             &darr;
           </ArrowContainer>

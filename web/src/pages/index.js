@@ -13,7 +13,7 @@ import Layout from '../containers/layout'
 
 import Hero from '../components/hero'
 import About from '../components/about/about'
-import SermonVideo from '../components/sermon/sermon'
+import Purpose from '../components/purpose/purpose'
 import SocialLinks from '../components/social-links/social-link'
 import EndorseLayout from '../components/endorsement/endorsement-layout'
 import Divider from '../components/divider/divider'
@@ -131,11 +131,10 @@ const IndexPage = props => {
           <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />
-          {/* <SermonVideo /> */}
-          {/* <Divider /> */}
+          <Purpose />
+          <Divider />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
-          {/* <Endorsement endorseNodes = {endorseNodes} /> */}
           <EndorseLayout endorseNodes = {endorseNodes} />
 
           <Divider />
