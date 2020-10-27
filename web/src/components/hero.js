@@ -40,7 +40,7 @@ const Title = styled('p')`
   font-size: 2.4rem;
 
   @media (max-width: 500px) {
-    padding: 1rem
+    padding: 2.5rem
   }
 `
 
