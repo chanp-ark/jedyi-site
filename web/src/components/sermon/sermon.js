@@ -37,18 +37,7 @@ const SermonVideo = () => {
       <Title>Message</Title>
       <MessageContainer>
         <VideoContainer>
-          <iframe
-            className='lazyload'
-            width='100%'
-            height='100%'
-            data-src='https://www.youtube.com/embed/V2KcuC6oUbA?start=196'
-            src=''
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            title='jed-sermon'
-            rel='noopener'
-            allowFullScreen
-          />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ON_uxib5qeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </VideoContainer>
       </MessageContainer>
     </>
