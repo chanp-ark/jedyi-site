@@ -37,7 +37,7 @@ const SermonVideo = () => {
       <Title>Message</Title>
       <MessageContainer>
         <VideoContainer>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ON_uxib5qeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe className='lazyload' width='100%' height='100%' data-src="https://www.youtube.com/embed/ON_uxib5qeU" title="Forgiveness Sermon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </VideoContainer>
       </MessageContainer>
     </>

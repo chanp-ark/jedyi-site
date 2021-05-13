@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 import Hero from '../components/hero'
-import SermonVideo from '../components/SermonVideo'
+import SermonVideo from '../components/sermon/sermon'
 import About from '../components/about/about'
 import Purpose from '../components/purpose/purpose'
 import SocialLinks from '../components/social-links/social-link'
@@ -130,11 +130,11 @@ const IndexPage = props => {
         <Container>
           <About content={site.about} pictures={data.pictures} />
           <Divider />
-          <SermonVideo />
-          <Divider />
           <SocialLinks className='social-links-section' />
           <Divider />
           <Purpose />
+          <Divider />
+          <SermonVideo />
           <Divider />
           {projectNodes && <ProjectPreviewGrid nodes={projectNodes} browseMoreHref='/blogs/' />}
           <Divider />
